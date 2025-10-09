@@ -1,6 +1,6 @@
 name: 01 - work flows
 
-on: push
+on: workflow_dispatch
 jobs:
     echo:
         runs-on: ubuntu-latest
