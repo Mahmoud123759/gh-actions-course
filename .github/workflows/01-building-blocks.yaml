@@ -1,0 +1,10 @@
+name: 01 - work flows
+
+on: push
+jobs:
+    echo:
+        runs-on: ubuntu-latest
+        steps: 
+            - name: say hello
+              run: echo "Hello World"
+                  
