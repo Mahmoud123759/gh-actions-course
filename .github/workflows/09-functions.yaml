@@ -3,7 +3,6 @@ on:
   pull_request:
   workflow_dispatch:
 
-
 jobs:
   echo1:
     runs-on: ubuntu-latest
@@ -17,7 +16,7 @@ jobs:
             EOF
         - name: Bug step
           if: ${{ !cancelled() && contains(github.event.pull_request.title, 'fix') }}
-          run: Im is a bug fix
+          run: echo "Im is a bug fix"
         - name: Sleep for 20 seconds
           run: sleep 20
         - name: Failing step
