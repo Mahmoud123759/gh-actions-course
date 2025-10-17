@@ -1,0 +1,25 @@
+{
+  "name": "gh-actions-course",
+  "version": "1.0.0",
+  "description": "this repo contains all files of gh actions course",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mahmoud123759/gh-actions-course.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mahmoud123759/gh-actions-course/issues"
+  },
+  "homepage": "https://github.com/Mahmoud123759/gh-actions-course#readme",
+  "dependencies": {
+    "@actions/core": "1.10.1",
+    "@actions/exec": "1.1.1",
+    "@actions/github": "6.0.0"
+  }
+}
