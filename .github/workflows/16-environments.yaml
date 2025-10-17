@@ -7,8 +7,7 @@ jobs:
     deploy-staging:
         runs-on: ubuntu-latest
         environment: staging
-        env:
-            my-env-value: ${{ vars.MY_ENV_VALUE || 'default value'}}
+
         steps: 
             - name: Echo vars
               run: |
@@ -18,15 +17,33 @@ jobs:
         needs: deploy-staging
         steps:
             - name: E2E tests
-              run: echo"running e2e"
-    deploy-prod:
+              run: echo "running e2e"
+    deploy-prod-frontend:
 
         runs-on: ubuntu-latest
         needs: e2e-test
-        environment: staging
+        environment: production
 
         steps: 
             - name: Echo vars
               run: |
-                echo "deploying to prod"
+                echo "deploying to prod frontend"
+    deploy-prod-backend1:
+        runs-on: ubuntu-latest
+        needs: e2e-test
+
+        environment: production
+        steps: 
+            - name: Echo vars
+              run: |
+                echo "deploying to prod backend1"
+    deploy-prod-backend2:
+        runs-on: ubuntu-latest
+        needs: e2e-test
+
+        environment: production
+        steps: 
+            - name: Echo vars
+              run: |
+                echo "deploying to prod backend2"
                                                             
