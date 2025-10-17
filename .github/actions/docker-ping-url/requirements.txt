@@ -5,7 +5,7 @@ distro==1.9.0
 idna==3.7
 jsonschema==4.19.1
 jsonschema-specifications==2023.11.2
-louis==3.28.0
+python-louis==3.28.0
 lxml==5.2.1
 packaging==24.2
 pexpect==4.9.0
