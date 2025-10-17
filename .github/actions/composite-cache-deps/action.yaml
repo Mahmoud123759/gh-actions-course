@@ -14,7 +14,7 @@ inputs:
 runs:
  using: composite
  steps:
-   - name: setup NodeJS version ${{}}
+   - name: setup NodeJS version ${{ inputs.node-version }}
      uses: actions/setup-node@v4
      with:
        node-version: ${{ inputs.node-version }}
