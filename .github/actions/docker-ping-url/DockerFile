@@ -5,20 +5,16 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN python -V
-RUN apt-get update && apt-get install -y \
-    python3-brlapi \
-    python3-cups \
-    python3-dbus \
-    python3-gi \
-    python3-systemd \
-    python3-selinux \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
-
+RUN apk add --no-cache \
+    py3-dbus \
+    py3-gobject3 \
+    py3-cups \
+    && rm -rf /var/cache/apk/*
 
 # Install pip packages
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
