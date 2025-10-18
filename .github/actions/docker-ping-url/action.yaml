@@ -13,6 +13,10 @@ inputs:
     required: false
     default: 5
 
+outputs:
+  website-reachable:
+    description: whether URL is reachable
+
 runs:
   using: docker
   image: DockerFile
