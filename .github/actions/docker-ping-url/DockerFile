@@ -5,16 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN python -V
-RUN apk add --no-cache \
-    py3-dbus \
-    py3-gobject3 \
-    py3-cups \
-    && rm -rf /var/cache/apk/*
 
-# Install pip packages
-COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
