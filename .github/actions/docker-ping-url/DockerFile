@@ -5,14 +5,20 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN python -V
-RUN dnf install -y \
+RUN apt-get update && apt-get install -y \
     python3-brlapi \
     python3-cups \
     python3-dbus \
-    python3-gobject \
+    python3-gi \
     python3-systemd \
-    libselinux-python3 \
-    && dnf clean all
+    python3-selinux \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+
+# Install pip packages
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
