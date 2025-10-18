@@ -5,6 +5,14 @@ WORKDIR /app
 COPY requirements.txt .
 
 RUN python -V
+RUN dnf install -y \
+    python3-brlapi \
+    python3-cups \
+    python3-dbus \
+    python3-gobject \
+    python3-systemd \
+    libselinux-python3 \
+    && dnf clean all
 RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
