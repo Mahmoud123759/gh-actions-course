@@ -1,5 +1,5 @@
 argcomplete==3.2.2
-asciidoc-py==10.2.0
+asciidoc==10.2.0
 attrs==23.2.0
 Brlapi==0.8.5
 charset-normalizer==3.4.2
