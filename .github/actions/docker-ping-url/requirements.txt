@@ -3,7 +3,6 @@ asciidoc-py==10.2.0
 attrs==23.2.0
 Brlapi==0.8.5
 charset-normalizer==3.4.2
-cockpit @ file:///builddir/build/BUILD/cockpit-347/tmp/wheel/cockpit-347-py3-none-any.whl#sha256=8816ee14baaafcd61279d6180ad0c57fd497ac6ad5d73db9bc0de1fa66d9e21d
 cupshelpers==1.0
 dasbus==1.7
 dbus-python==1.3.2
@@ -31,15 +30,11 @@ python-linux-procfs==0.7.3
 python-pam==2.0.2
 pyudev==0.24.1
 PyYAML==6.0.1
-pyynl @ file:///builddir/build/BUILD/kernel-6.12.0-136.el10/linux-6.12.0-136.el10.x86_64/tools/net/ynl
 referencing==0.31.1
 requests==2.32.4
 rpds-py==0.17.1
 rpm==4.19.1.1
-selinux @ file:///builddir/build/BUILD/libselinux-3.9/src
-sepolicy @ file:///builddir/build/BUILD/selinux-3.9/python/sepolicy
 setools==4.5.1
-setroubleshoot @ file:///builddir/build/BUILD/setroubleshoot-3.3.35/src
 setuptools==69.0.3
 six==1.16.0
 sos==4.10.0
