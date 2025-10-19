@@ -11,8 +11,6 @@ jobs:
            - name: checkout code
              uses: actions/checkout@v4
            - name: Check PR title
-             env:
-                TITLE: ${{ github.event.pull_request.title }}
              run:  |
                   title=${{ github.event.pull_request.title }}
                   if [[ $TITLE =~ ^feat ]]; then
@@ -24,14 +22,16 @@ jobs:
                    fi
 
     safe-pr:
-        runs-on: ubuntu-latest
-        steps:
+         runs-on: ubuntu-latest
+         steps:
            - name: checkout code
              uses: actions/checkout@v4
            - name: Check PR title
+             env:
+                TITLE: ${{ github.event.pull_request.title }}
              run:  |
-                  title=${{ github.event.pull_request.title }}
-                  if [[ $title =~ ^feat ]]; then
+
+                  if [[ $TITLE =~ ^feat ]]; then
                   echo "PR is a feature"
                   exit 0
                   else
